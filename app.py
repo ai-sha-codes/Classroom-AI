@@ -1150,8 +1150,7 @@ def flow_add_leave():
     with st.form("add_leave_form"):
         teacher_name = st.text_input("Teacher name or ID")
 
-        # No pre-selected date: the user picks one day, or a start
-        # and an end date for several days.
+
         leave_dates = st.date_input(
             "Leave date (click one day, or click a start and an end date for multiple days)",
             value=()
@@ -1458,9 +1457,6 @@ for history_message in st.session_state.messages:
 
 # --------------------------------------------------
 # USER INPUT
-#
-# The user's message appears straight away, then the assistant
-# bubble shows "Searching..." and is overwritten by the result.
 # --------------------------------------------------
 
 user_message = st.chat_input("Ask something about classrooms or teachers...")
